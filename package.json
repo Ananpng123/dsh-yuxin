@@ -1,0 +1,49 @@
+{
+  "name": "dsh-yuxin",
+  "version": "0.4.17",
+  "type": "module",
+  "description": "鱼信 · DSH 点对点好友与聊天（自带 P2P 传输引擎，零第三方插件依赖）",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.1.7-alpha.1"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "p2p",
+    "chat",
+    "iroh",
+    "yuxin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ananpng123/dsh-yuxin.git"
+  },
+  "dependencies": {
+    "@number0/iroh": "^1.2.0"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/transport.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ]
+}

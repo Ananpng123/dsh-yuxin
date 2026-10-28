@@ -1,0 +1,17 @@
+# 本机备份与交接记录
+_bak-*
+_handoff.md
+*.bak
+
+# 设计原型（不参与运行）
+prototype/
+
+# 随包原生引擎：本地要留着跑，但不进仓库。
+# 别人从 GitHub 装时由 package.json 的 dependencies 自动拉对应平台版本。
+lib/vendor/
+
+# 依赖与系统垃圾
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
